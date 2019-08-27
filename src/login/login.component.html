@@ -1,0 +1,32 @@
+<div class="text">
+<div class="container-fluid mb-5">
+    <form #userForm="ngForm" (ngSubmit)="getUsers(userForm)" novalidate>
+      <img src="https://cdn3.iconfinder.com/data/icons/black-easy/512/538642-user_512x512.png"> 
+     <br><br>
+     {{userForm.form.valid}}  
+
+    <div class="form-group" >
+   <input type="text" name="name" class="form-control" required #name="ngModel" 
+    [class.is-invalid]="name.invalid && name.touched" placeholder="User Name" [(ngModel)]="user.username">
+  <small class="text-danger" [class.d-none]="name.valid || name.untouched"> Name should not be Null</small>
+    </div>
+    <div class="form-group">
+    <input type="password" class="form-control" required #password="ngModel" pattern="^\d{6}$"  [(ngModel)]="user.password"
+      [class.is-invalid]="password.invalid && password.touched" name="password" 
+      placeholder="Password">
+      <!--<small class="text-danger" [class.d-none]="password.valid || password.untouched">
+         Password should be number and should be 6 character</small>-->
+         <div *ngIf="password.errors && (password.invalid && password.touched)">
+           <small class="text-danger" *ngIf="password.errors.required"> Password is required</small>
+             <small class="text-danger" *ngIf="password.errors.pattern">Password must be 6 digit number</small>
+           </div>
+           
+    </div>
+    <button type="submit" [title]="userForm.valid ? 'Save your entered data' : 
+    'Disabled until the form data is valid'"
+              [disabled]="!userForm.form.valid">submit</button>
+    <a [routerLink]="['/register']">New user?</a>
+    
+    </form>
+</div>
+</div>

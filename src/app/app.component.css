@@ -1,0 +1,22 @@
+.real{
+      background: linear-gradient(to top right, #33ccff 0%, #0066ff 100%);;
+    height:55px;
+}
+.butt{
+    background-color: white;
+}
+.head{
+    font-size: 25px;
+
+}
+.welcome{
+    font-size: 40px;
+    color: #000099
+;
+    /*background: linear-gradient(to top right, #33ccff 0%, #0066ff 100%);*/
+    
+}
+
+li{
+    float: left;
+}

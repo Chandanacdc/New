@@ -1,0 +1,23 @@
+
+    <button class="log" [routerLink]="['/login']"> goback</button>
+    <form #userForm="ngForm" (ngSubmit)="getUsers(userForm)" novalidate class="text">
+        {{userForm.value | json}}
+    <img src="../assets/join.jpg" alt = "JOIN NOW" > 
+
+      <div class="form-group" >
+   <input type="text" name="name" class="form-control" required #name="ngModel" 
+    [class.is-invalid]="name.invalid && name.touched" placeholder="User Name"
+     [(ngModel)]="user.username">
+  <small class="text-danger" [class.d-none]="name.valid || name.untouched">
+       Name should not be Null</small>
+    </div>
+    
+    <input type="number" #mobile="ngModel" [class.is-invalid]="mobile.invalid && mobile.touched"  name="mobile" placeholder="mobile" ngModel><br><br>
+    
+    <input type="text" name="username" placeholder="User Name" ngModel><br><br>
+    <input type="password" name="password" placeholder="Password" ngModel><br><br>
+    <button> submit</button>
+  
+    
+    </form>
+

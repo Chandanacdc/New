@@ -1,0 +1,48 @@
+.text{
+    text-align: center;
+  padding-top: 100px;
+  border-radius: 10px;
+  /*background-color: PaleTurquoise;*/
+  height:700px;
+  width: 500px;
+  margin-left: 500px;
+  margin-top: 2px;
+  
+}
+.un{
+    padding-top: 40px;
+    }
+    input[type=text]{
+    border-radius: 10px;
+    height: 50px;
+    width: 300px;
+    text-align: center
+    }
+input[type=password]{
+    border-radius: 10px;
+    height: 50px;
+     width: 300px;
+    text-align: center
+    }
+    .submit{
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    background-color: SteelBlue;
+    }
+    .log{
+      border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    background-color: #00FFFF;
+    margin-left: 50px;
+    }  
+    
+    input[type=number]{
+    border-radius: 10px;
+    height: 50px;
+     width: 300px;
+    text-align: center
+    }
+   
+   
